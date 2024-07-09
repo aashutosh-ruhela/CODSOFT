@@ -1,0 +1,50 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="calculator">
+        <div class="calculator-display">
+            <input type="text" class="display d1" disabled>
+            <input type="text" class="display d2" value="0">
+        </div>
+        <div class="buttons">
+            <div class="row row1">
+                <button class="btn-operator clear" onclick='operations("C")'>C</button>
+                <button class="btn operator" onclick='operations("/")'>÷</button>
+                <button class="btn operator" onclick='operations("*")'>x</button>
+                <button class="btn number" onclick='operations("7")'>7</button>
+                <button class="btn number" onclick='operations("8")'>8</button>
+                <button class="btn number" onclick='operations("9")'>9</button>
+                <button class="btn number" onclick='operations("4")'>4</button>
+                <button class="btn number" onclick='operations("5")'>5</button>
+                <button class="btn number" onclick='operations("6")'>6</button>
+                <button class="btn number" onclick='operations("1")'>1</button>
+                <button class="btn number" onclick='operations("2")'>2</button>
+                <button class="btn number" onclick='operations("3")'>3</button>
+                <button class="btn operator" onclick='operations("(")'>(</button>
+                <button class="btn number" onclick='operations("0")'>0</button>
+                <button class="btn operator" onclick='operations(")")'>)</button>
+            </div>
+            <div class="row row2">
+                <button class="btn operator" onclick='operations("<")'><</button>
+                <button class="btn operator" onclick='operations("-")'>-</button>
+                <button class="btn operator" onclick='operations("+")'>+</button>
+                <button class="btn operator equal" onclick='operations("=")'>=</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

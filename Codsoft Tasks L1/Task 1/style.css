@@ -1,0 +1,191 @@
+.menu {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.close-btn {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .close-btn {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        height: 100vh;
+        color: #000000;
+        background-color: #ffffff;
+        width: 70vw;
+        max-width: 400px;
+        transform: translateX(-200%);
+        padding: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .menu li {
+        border-bottom: 1px solid gray;
+        padding: 20px 0;
+    }
+
+    .menu li:first-child {
+        font-weight: bold;
+        border: none;
+    }
+
+    .menu.active {
+        /* width: 70vw; */
+        transform: translateX(0);
+    }
+}
+.category {
+    position: relative;
+    overflow: hidden;
+}
+
+.category img {
+    transform-origin: center;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.3);
+    }
+}
+
+.category:hover img {
+    animation: scaleUp 5s forwards;
+}
+
+.product {
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 600px;
+    background-size: contain;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.product1 {
+    background-image: url("./images/kidsFront.png");
+
+}
+
+.product1:hover {
+    background-image: url("./images/kidsBack.png");
+}
+
+
+.product2 {
+    background-image: url("./images/hoodieFront.png");
+}
+
+.product2:hover {
+    background-image: url("./images/hoodieBack.png");
+
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.button a {
+    font-weight: normal;
+    padding: 13px 25px;
+    background-color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s linear;
+    overflow: hidden;
+    width: max-content;
+}
+
+.button a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s linear;
+
+}
+
+.button a:hover::before {
+    left: 0;
+    z-index: -1;
+}
+
+.button a:hover {
+    color: black;
+    border: 1px solid black;
+}
+
+.cat .btn {
+    display: flex;
+}
+
+.cat .btn a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: black;
+    border: 1px solid white;
+    background-color: white;
+    padding: 12px 22px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s linear;
+    overflow: hidden;
+}
+
+.cat .btn a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    transition: all 0.3s linear;
+
+}
+
+.cat .btn a:hover::before {
+    left: 0;
+    z-index: -1;
+    background-color: transparent;
+}
+
+.cat .btn a:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+
+@media screen and (max-width: 700px) {
+    .product {
+        height: 80vw;
+        width: 80vw;
+    }
+}
